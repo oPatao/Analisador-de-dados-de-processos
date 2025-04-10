@@ -85,9 +85,9 @@ int contaIdAssuntosUnicos(Processo *processos, int numProcessos) {
     int uniqueCount = 0;
 
     for (int i = 0; i < numProcessos; i++) {
-        char idCopia[50]; // Cópia local do id_assunto
-        strcpy(idCopia, processos[i].id_assunto); // Copiar para não modificar original
-
+        char idCopia[50]; 
+        strcpy(idCopia, processos[i].id_assunto); 
+        
         char *token = strtok(idCopia, ",{}");
 
         while (token != NULL) {
