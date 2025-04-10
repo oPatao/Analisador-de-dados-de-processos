@@ -50,10 +50,8 @@ void salvaProcessosOrdenadosEmCSV(const char *nomeArquivo, Processo *processos, 
         return;
     }
 
-    // Escreve o cabeçalho do arquivo CSV
     fprintf(arquivo, "id,numero,data_ajuizamento,id_classe,id_assunto,ano_eleicao\n");
 
-    // Escreve os dados dos processos no arquivo
     for (int i = 0; i < numProcessos; i++) {
         fprintf(arquivo,
                 "%d,%s,%s,%d,%s,%d\n",
